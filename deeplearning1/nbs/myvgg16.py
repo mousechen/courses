@@ -73,7 +73,7 @@ class Vgg16():
         """
         
         all_preds = self.model.predict(imgs)
-        print(all_preds)
+        #print(all_preds)
         idxs = np.argmax(all_preds,axis=1)
         preds = [all_preds[i,idxs[i]] for i in range(len(idxs))]
         classes = [self.classes[idx] for idx in idxs]
